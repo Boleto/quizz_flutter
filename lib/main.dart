@@ -12,7 +12,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    var questions = [
+    var _questions = [
       'What\'s your favorite color?',
       'What\'s your favorite animal',
     ];
@@ -24,17 +24,17 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text(questions[questionIndex]),
+            Text(_questions[questionIndex]),
             RaisedButton(
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
               child: Text('Answer 1'),
             ),
             RaisedButton(
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
               child: Text('Answer 2'),
             ),
             RaisedButton(
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
               child: Text('Answer 3'),
             ),
           ],
@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  void answerQuestion() {
+  void _answerQuestion() {
     setState(() {
       questionIndex += 1;
     });
