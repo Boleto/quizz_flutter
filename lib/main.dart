@@ -9,7 +9,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  var questionIndex = 0;
+  var _questionIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Question(question: _questions[questionIndex]),
+            Question(question: _questions[_questionIndex]),
             RaisedButton(
               onPressed: _answerQuestion,
               child: Text('Answer 1'),
@@ -46,7 +46,7 @@ class _MyAppState extends State<MyApp> {
 
   void _answerQuestion() {
     setState(() {
-      questionIndex += 1;
+      _questionIndex += 1;
     });
   }
 }
