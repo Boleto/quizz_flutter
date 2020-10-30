@@ -17,8 +17,19 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Text('This is my default text!'),
-            Text('This is my default text!'),
+            Text('The question!'),
+            RaisedButton(
+              onPressed: null,
+              child: Text('Answer 1'),
+            ),
+            RaisedButton(
+              onPressed: null,
+              child: Text('Answer 1'),
+            ),
+            RaisedButton(
+              onPressed: null,
+              child: Text('Answer 1'),
+            ),
           ],
         ),
       ),
