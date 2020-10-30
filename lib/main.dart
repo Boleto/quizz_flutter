@@ -19,20 +19,26 @@ class MyApp extends StatelessWidget {
           children: [
             Text('The question!'),
             RaisedButton(
-              onPressed: null,
+              onPressed: answerQuestion,
               child: Text('Answer 1'),
             ),
             RaisedButton(
-              onPressed: null,
-              child: Text('Answer 1'),
+              onPressed: answerQuestion,
+              child: Text('Answer 2'),
             ),
             RaisedButton(
-              onPressed: null,
-              child: Text('Answer 1'),
+              onPressed: () {
+                // to be implemented
+              },
+              child: Text('Answer 3'),
             ),
           ],
         ),
       ),
     );
+  }
+
+  void answerQuestion() {
+    // to be implemented
   }
 }
