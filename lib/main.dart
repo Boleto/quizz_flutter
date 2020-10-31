@@ -36,10 +36,14 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Question(questionText: _questions[_questionIndex]),
-            Answer(onPressed: _answerQuestion),
-            Answer(onPressed: _answerQuestion),
-            Answer(onPressed: _answerQuestion),
+            Question(questionText: _questions[_questionIndex]['questionText']),
+            ...(_questions[_questionIndex]['answers'] as List<String>)
+                .map((answer) {
+              return Answer(
+                onPressed: _answerQuestion,
+                answerText: answer,
+              );
+            }).toList(),
           ],
         ),
       ),
